@@ -3,7 +3,7 @@ include "funcs.php";
 $pdo = db_con();
 
 //２．データ登録SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_an_table");
+$stmt = $pdo->prepare("SELECT * FROM gs_bm_table");
 $status = $stmt->execute();
 
 //３．データ表示
@@ -16,7 +16,7 @@ if ($status == false) {
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
       $view .='<p>';
       $view .='<a href="detail.php?id='.$result["id"].'">';
-      $view .= $result["name"] . "," . $result["email"] ;
+      $view .= $result["bookname"] . "," . $result["url"] ;
       $view .='</a>';
       $view .=' ';
       $view .='<a href="delete.php?id='.$result["id"].'">';
@@ -35,7 +35,7 @@ if ($status == false) {
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>フリーアンケート表示</title>
+<title>書籍ブックマーク</title>
 <link rel="stylesheet" href="css/range.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <style>div{padding: 10px;font-size:16px;}</style>

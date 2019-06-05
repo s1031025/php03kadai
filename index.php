@@ -22,10 +22,9 @@
 <form method="post" action="insert.php">
   <div class="jumbotron">
    <fieldset>
-    <legend>フリーアンケート</legend>
-     <label>名前：<input type="text" name="name"></label><br>
-     <label>Email：<input type="text" name="email"></label><br>
-     <label>年齢：<input type="text" name="age"></label><br>
+    <legend>書籍ブックマーク</legend>
+     <label>書籍名：<input type="text" name="bookname"></label><br>
+     <label>書籍URL：<input type="text" name="url"></label><br>
      <label><textArea name="naiyou" rows="4" cols="40"></textArea></label><br>
      <input type="submit" value="送信">
     </fieldset>

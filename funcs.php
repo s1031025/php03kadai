@@ -7,7 +7,7 @@ function h($str){
 
 function db_con(){
     try {
-        $pdo = new PDO('mysql:dbname=gs_deb3;charset=utf8;host=localhost','root','');
+        $pdo = new PDO('mysql:dbname=gsbmkadai;charset=utf8;host=localhost','root','');
         return $pdo;
     } catch (PDOException $e) {
         exit('DB-Connection-Error:'.$e->getMessage());
